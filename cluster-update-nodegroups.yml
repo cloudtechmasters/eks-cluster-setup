@@ -1,0 +1,45 @@
+---
+apiVersion: eksctl.io/v1alpha5
+kind: ClusterConfig
+metadata:
+  name: eksdemo
+  region: us-east-1
+  version: "1.19"
+
+managedNodeGroups:
+  - name: workers-1-18
+    instanceType: t2.medium
+    privateNetworking: true
+    desiredCapacity: 2
+    minSize: 2
+    maxSize: 4
+    volumeSize: 10
+    ssh:
+      allow: true
+      publicKeyName: devops-8am
+    labels: {role: worker}
+    tags:
+      nodegroup-role: worker
+    iam:
+      withAddonPolicies:
+        externalDNS: true
+        certManager: true
+        autoScaler: true
+  - name: workers-1-19
+    instanceType: t2.medium
+    privateNetworking: true
+    desiredCapacity: 2
+    minSize: 2
+    maxSize: 4
+    volumeSize: 10
+    ssh:
+      allow: true
+      publicKeyName: devops-8am
+    labels: {role: worker}
+    tags:
+      nodegroup-role: worker
+    iam:
+      withAddonPolicies:
+        externalDNS: true
+        certManager: true
+        autoScaler: true        
