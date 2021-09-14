@@ -52,13 +52,13 @@
     eksctl create nodegroup --cluster=eksdemo \
                        --region=us-east-1 \
                        --name=eksdemo-ng-public \
-                       --node-type=t2.small \
+                       --node-type=t2.medium \
                        --nodes=2 \
                        --nodes-min=2 \
                        --nodes-max=4 \
                        --node-volume-size=10 \
                        --ssh-access \
-                       --ssh-public-key=ekscluster \
+                       --ssh-public-key=vamsi-devops \
                        --managed \
                        --asg-access \
                        --external-dns-access \
