@@ -58,7 +58,7 @@
                        --nodes-max=4 \
                        --node-volume-size=10 \
                        --ssh-access \
-                       --ssh-public-key=vamsi-devops \
+                       --ssh-public-key=devops-7am-aws \
                        --managed \
                        --asg-access \
                        --external-dns-access \
