@@ -146,6 +146,6 @@ spec:
         - containerPort: 80
 EOF       
 		
-kubectl apply -f deployment.yaml
+kubectl apply -f nginx-deployment.yaml
 ```
 
