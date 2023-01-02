@@ -67,7 +67,7 @@
                        --nodes-max=4 \
                        --node-volume-size=10 \
                        --ssh-access \
-                       --ssh-public-key=devops-7am-aws \
+                       --ssh-public-key=devops-demo-est \
                        --managed \
                        --asg-access \
                        --external-dns-access \
